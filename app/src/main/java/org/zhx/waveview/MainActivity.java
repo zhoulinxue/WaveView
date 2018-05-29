@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
             timer = null;
         }
 
-        timer = new CountDownTimer(51 * 1000, 1000) {
-            int progress = 0;
+        timer = new CountDownTimer(50 * 1000, 500) {
+            int progress = 1;
 
             @Override
             public void onTick(long millisUntilFinished) {
                 if (timer != null) {
-                    progress += 2;
+                    progress ++;
                     vm.setWaterProgress(progress);
                     Log.e(TAG, progress + "");
                 }
