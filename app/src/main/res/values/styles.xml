@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <declare-styleable name="WaveView">
+
+        <attr name="backgroundColor" format="color" />
+        <attr name="firstWaveColor" format="color" />
+        <attr name="secondWaveColor" format="color" />
+        <attr name="waveSize" format="dimension" />
+        <attr name="waterProgress" format="float" />
+        <attr name="watertextColor" format="color" />
+        <attr name="watertextSize" format="integer" />
+        <attr name="waterBorderColor" format="color"/>
+        <attr name="waterBorderWidth" format="integer"/>
+        <!-- 10 到 50之间比较合适-->
+        <attr name="amplitude" format="integer" />
+        <!-- 1 到 6 之间比较合适 -->
+        <attr name="speed" format="integer" />
+    </declare-styleable>
+
+</resources>
