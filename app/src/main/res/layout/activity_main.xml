@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:WaveView="http://schemas.android.com/apk/res-auto"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,11 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <org.zhx.waveview.WaveView
+        android:layout_marginTop="20dp"
         android:id="@+id/waveview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         WaveView:amplitude="36"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         WaveView:backgroundColor="#FAFAFA"
         WaveView:firstWaveColor="#42ADFF"
         WaveView:secondWaveColor="#4d42ADFF"
@@ -21,9 +23,24 @@
         WaveView:waterProgress="20"
         WaveView:watertextColor="@color/colorPrimary"
         WaveView:watertextSize="50"
-        WaveView:waveSize="200dp"
+        WaveView:waveSize="170dp"
         WaveView:waterBorderColor="#e5e5e5"
-        WaveView:waterBorderWidth="2"/>
+        WaveView:waterBorderWidth="2"
+        />
+
+        <org.zhx.waveview.RoundProgress
+            android:layout_below="@id/waveview"
+            android:id="@+id/roundProgress"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android_custom:roundColor="#E7E7E7"
+            android_custom:roundProgressColor="#3DA2FD"
+            android_custom:roundWidth="2dp"
+            android_custom:roundtextColor="#3DA2FD"
+            android_custom:roundtextSize="16dp"
+            android_custom:textIsDisplayable="true" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

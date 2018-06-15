@@ -166,7 +166,7 @@ public class WaveView extends View {
         }
         canvas.setDrawFilter(new PaintFlagsDrawFilter(0, Paint.ANTI_ALIAS_FLAG | Paint.FILTER_BITMAP_FLAG));
         canvas.drawBitmap(bitmap, 0, 0, null);
-        canvas.drawText((int)waterProgress + " %", (waveSize - mTextPaint.measureText(waterProgress+"")) / 2, waveSize /2, mTextPaint);
+        canvas.drawText((int)waterProgress + " %", (waveSize +borderWidth- mTextPaint.measureText(waterProgress+"")) / 2, (waveSize+borderWidth) /2, mTextPaint);
         if (borderWidth > 0) {
             // 边框大于0,表示需要绘制边框
             canvas.drawCircle(waveSize / 2, waveSize / 2,waveSize / 2, mBorderPaint);
@@ -349,4 +349,5 @@ public class WaveView extends View {
             waveHandler = null;
         }
     }
+
 }
