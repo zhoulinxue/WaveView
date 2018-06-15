@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         if (timer != null) {
             timer.cancel();
             timer = null;
+
         }
 
         timer = new CountDownTimer(50 * 1000, 500) {
